@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <label for="content">文章内容</label>
                             <div id="editormd">
-                                
+
                             </div>
                             <textarea style="display:none;" id="html-content"  name="html-content"></textarea>
                         </div>
