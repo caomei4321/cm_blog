@@ -1,6 +1,6 @@
 @extends('layouts.backend')
 
-@section('title', 'Moell Blog')
+@section('title', 'cmBlog')
 
 @section('header')
     <h1>
