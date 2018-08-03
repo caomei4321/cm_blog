@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <label for="content">文章内容</label>
                             <div id="editormd">
-                                <textarea class="editormd-markdown-textarea" style="display:none;" id="content" name="markdown-content"></textarea>
+                                <textarea class="editormd-markdown-textarea" style="display:none;" id="content" name="markdown-content">{!! $article->content !!}</textarea>
                                 <textarea style="display:none;"  name="html-content"></textarea>
                             </div>
                              <textarea  style="display:none;"  name="html-content"></textarea>
