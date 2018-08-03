@@ -47,8 +47,8 @@
                         <div class="form-group">
                             <label for="content">文章内容</label>
                             <div id="editormd">
-                                {!! $article->html_content !!}
-
+                                <textarea class="editormd-markdown-textarea" style="display:none;" id="content" name="markdown-content"></textarea>
+                                <textarea style="display:none;"  name="html-content"></textarea>
                             </div>
                              <textarea  style="display:none;"  name="html-content"></textarea>
                         </div>
@@ -92,27 +92,13 @@
     <script src="{{ asset('editor.md/editormd.min.js') }}"></script>
     <script src="{{ asset('wangEditor/wangEditor.js') }}"></script>
     <script>
-
-        var E = window.wangEditor
-        var editor = new E('#editormd')
-
-        // 或者 var editor = new E( document.getElementById('editor') )
-        var $text1 = $("#article-form textarea[name='html-content']")
-        editor.customConfig.onchange = function (html) {
-            // 监控变化，同步更新到 textarea
-            $text1.val(html)
-        }
-        editor.create()
-        // 初始化 textarea 的值
-        $text1.val(editor.txt.html())
-
-        /*var editor = editormd("editormd", {
+        var editor = editormd("editormd", {
             path        : " {{ asset('/editor.md/lib/') }}/",
             height  : 500,
             syncScrolling : "single",
             toolbarAutoFixed: false,
             saveHTMLToTextarea : false
-        });*/
+        });
 
         /* 文章操作验证 */
         $("#article-form").bootstrapValidator({
@@ -140,8 +126,8 @@
                 }
             }
         }).on('success.form.bv', function(e) {
-            /*var html = editor.getPreviewedHTML();*/
-            $text1.val();
+            var html = editor.getPreviewedHTML();
+            $("#article-form textarea[name='html-content']").val(html);
         });
     </script>
 @endsection
