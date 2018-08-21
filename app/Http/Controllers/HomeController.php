@@ -60,4 +60,9 @@ class HomeController extends Controller
         return view('default.home', compact('articles'));
 
     }
+
+    public function alipay()
+    {
+        return view('default.alipay');
+    }
 }
