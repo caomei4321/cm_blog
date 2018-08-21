@@ -12,8 +12,7 @@ do something。。。。。..
 
 <script type="text/javascript">
     document.read(function () {
-        var qrurl = "www.baidu.com";
-        /*var qrurl = "https://qr.alipay.com/c1x04349gl3odakwexd8437";*/
+        var qrurl = "https://qr.alipay.com/c1x04349gl3odakwexd8437";
         function is_weixin() {
             if (/MicroMessenger/i.test(navigator.userAgent)) {
                 return true
