@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/alipay','HomeController@alipay');
+Route::get('/alipay','HomeController@alipay');//瞎写的没意义的
 
 Route::get('/article/{id}', ['as' => 'article', 'uses' => 'ArticleController@index']);
 
